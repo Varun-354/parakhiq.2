@@ -70,11 +70,7 @@ def extract_skills(text, skills_list):
     return list(set(found_skills))
 
 
-ALL_SKILLS = [
-    "python", "java", "sql", "machine learning",
-    "django", "flask", "react", "html", "css",
-    "javascript", "docker", "aws", "kubernetes"
-]
+from phase_1 import ALL_SKILLS
 
 
 def parse_resume(file_path):
@@ -91,33 +87,3 @@ def parse_resume(file_path):
         "experience": sections["experience"],
         "projects": sections["projects"]
     }
-
-if __name__ == "__main__":
-    file_path = "Sample1.pdf"   # put your resume here
-
-    text = extract_text_from_pdf(file_path)
-
-    print("\n===== EXTRACTED TEXT =====\n")
-    print(text[:500])  # print first 1000 chars
-    raw_text = extract_text_from_pdf(file_path)
-    cleaned_text = clean_text(raw_text)
-
-    print("\nCLEANED TEXT:\n")
-    print(cleaned_text[:500])
-
-    sections = extract_sections(raw_text)  # use raw_text here
-
-    print("\nSECTIONS:\n")
-    for key, value in sections.items():
-        print(f"{key.upper()}:\n{value[:200]}\n")
-
-
-
-if __name__ == "__main__":
-    file_path = "Sample1.pdf"
-
-    result = parse_resume(file_path)
-
-    print("\nFINAL OUTPUT:\n")
-    for key, value in result.items():
-        print(f"{key.upper()}:\n{value}\n")

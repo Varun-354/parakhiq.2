@@ -32,7 +32,7 @@ def extract_skills_from_resume(text, skills_list):
     text = text.lower()
     found_skills = []
 
-    for skill in skills_list:
+    for skill in skills_list:  
         pattern = r'\b' + re.escape(skill.lower()) + r'\b'
         if re.search(pattern, text):
             found_skills.append(skill)
@@ -103,20 +103,3 @@ def recommend_top_roles(extracted_skills, top_k=3):
     role_scores.sort(key=lambda x: x[1], reverse=True)
 
     return role_scores[:top_k]
-
-
-# ===== FINAL PIPELINE =====
-
-resume_skills = ['python', 'sql']
-
-top_roles = recommend_top_roles(resume_skills)
-
-for role, score in top_roles:
-    missing = get_skill_gap(resume_skills, role)
-    certs = suggest_certifications(missing)
-
-    print("\n====================")
-    print("Role:", role)
-    print("Score:", score)
-    print("Missing Skills:", missing)
-    print("Recommendations:", certs)
