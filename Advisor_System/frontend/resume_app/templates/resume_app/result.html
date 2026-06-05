@@ -1,0 +1,226 @@
+{% extends 'resume_app/base.html' %}
+{% block title %}
+ParakhIQ Results
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+
+    <div class="container">
+
+        <div class="mb-5">
+
+            
+<h1 class="dashboard-heading">
+    Career Intelligence Report
+</h1>
+            <p class="dashboard-subtext" style="font-size: 1.3rem; line-height: 1.8;">
+    Gain deeper insights into your profile,
+    identify improvement areas, and explore
+    career paths that match your potential
+</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN DASHBOARD -->
+<section class="pt-0">
+
+    <div class="container">
+
+
+       
+        <!-- Predicted Role Card -->
+<div class="premium-card role-card w-100 mb-4">
+
+    <p class="card-label">
+        Predicted Role
+    </p>
+
+    <h1 class="role-title">
+        {{ result.predicted_role|title }}
+    </h1>
+
+    <p class="card-description">
+        AI analyzed your resume and predicted
+        the most suitable domain based on
+        skills, experience and profile patterns.
+    </p>
+
+</div>
+
+        <!-- Resume Score Card -->
+        <div class="premium-card w-100 mb-5">
+
+           <p class="card-label">
+    Resume Intelligence Score
+</p>
+
+<h2 class="score-text mb-3">
+    {{ result.final_resume_evaluation.final_score }}%
+</h2>
+
+<p class="score-label">
+    {{ result.final_resume_evaluation.label }}
+</p>
+
+            <div class="progress" style="height: 12px; border-radius: 20px;">
+
+                <div class="progress-bar"
+                     style="
+                     width: {{ result.final_resume_evaluation.final_score }}%;
+                     background: linear-gradient(90deg,#8b5cf6,#c084fc);
+                     ">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Skills Section -->
+        <div class="premium-card mb-5">
+
+            <h3 class="section-title mb-4">
+    Skills Detected
+</h3>
+
+            <div class="d-flex flex-wrap gap-3">
+
+                {% for skill in result.skills %}
+
+                    <span class="skill-badge"
+                          style="
+                          background: rgba(37,99,235,0.08);
+                          font-size: 0.95rem;
+                          ">
+
+                        {{ skill }}
+
+                    </span>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <!-- Recommendations -->
+        <div class="mb-5">
+
+            <h2 class="section-title mb-4">
+    Career Recommendations
+</h2>
+
+            {% for rec in result.recommendations %}
+
+                <div class="premium-card mb-4">
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+
+                        <h3 class="fw-bold mb-0">
+                            {{ rec.role }}
+                        </h3>
+
+                        <span class="role-score-badge">
+                            {{ rec.score }}
+                        </span>
+
+                    </div>
+
+
+                    <!-- Missing Skills -->
+                   <h5 class="sub-section-title">
+    Missing Skills
+</h5>
+
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+
+                        {% for skill in rec.missing_skills %}
+
+                            <span class="skill-badge">
+
+    {{ skill }}
+
+</span>
+                        {% endfor %}
+
+                    </div>
+
+
+                    <!-- Courses -->
+                <div class="recommendation-section">
+                   <h5 class="sub-section-title">
+    Recommended Learning
+</h5>
+
+                    <ul class="mb-0">
+
+                        {% for course in rec.recommendations %}
+
+                            <li class="mb-2">
+                                {{ course }}
+                            </li>
+
+                        {% endfor %}
+
+                    </ul>
+                </div>
+                </div>
+
+            {% endfor %}
+
+        
+            <div class="premium-card mb-5">
+    <h3 class="section-title mb-4">
+    AI Career Assessment
+</h3>
+
+<span class="insight-title">
+    Final Verdict
+</span>
+<p>
+    {{ result.llm_feedback.final_verdict }}
+</p>
+
+<span class="insight-title">
+    Career Path
+</span>
+
+<p>
+    {{ result.llm_feedback.career_path }}
+</p>
+
+<p class="mt-4">
+   <span class="insight-title">
+    Evidence & Reasoning
+</span>
+</p>
+
+<p>
+    {{ result.llm_feedback.reasoning }}
+</p>
+
+</div>
+        </div>
+
+    </div>
+
+    {% comment %} <form action="{% url 'download_report' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="primary-btn">
+        Download Report
+    </button>
+</form> {% endcomment %}
+
+</section>
+
+{% endblock %}
+

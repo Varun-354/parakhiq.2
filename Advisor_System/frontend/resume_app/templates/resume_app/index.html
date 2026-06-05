@@ -1,0 +1,199 @@
+
+{% extends 'resume_app/base.html' %}
+{% block title %}
+ParakhIQ
+{% endblock %}
+
+{% block content %}
+
+<!-- ===================== HERO / BRAND AREA ===================== -->
+<section class="hero-section text-center position-relative">
+
+    <!-- Animated branding background layer -->
+    <div class="brand-glow"></div>
+
+    <div class="container pt-5">
+
+        <!-- PARAKHIQ BRAND -->
+        <h1 class="brand-title mb-2">
+            PARAKHIQ
+        </h1>
+
+        <!-- AI PLATFORM TAG -->
+        <div class="brand-tag mb-4">
+            AI Resume Intelligence Platform
+        </div>
+
+        <!-- MAIN HEADLINE -->
+        <h2 class="section-title mb-3">
+            Upload Your Resume. <br>
+            Get Intelligent Career Insights.
+        </h2>
+
+        <!-- DESCRIPTION -->
+        <p class="section-subtitle mx-auto mb-5">
+            Analyze your resume using AI-powered intelligence,
+            detect skill gaps, predict roles, and get personalized career recommendations instantly.
+        </p>
+
+        <!-- ===================== UPLOAD SECTION ===================== -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <div class="premium-card upload-box">
+
+                    <!-- ICON -->
+                    <div class="mb-3">
+                        <i class="bi bi-cloud-arrow-up-fill upload-icon"></i>
+                    </div>
+
+                    <h4 class="mb-3 fw-bold">
+                        Upload Your Resume
+                    </h4>
+
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="upload-row">
+
+                            <input type="file"
+                                   name="resume"
+                                   class="file-input">
+
+                            <button type="submit" class="analyze-btn">
+                                Analyze Resume
+                            </button>
+
+                        </div>
+                    </form>
+
+                    <small class="text-muted d-block mt-3">
+                        PDF or DOCX supported • AI-powered analysis in seconds
+                    </small>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===================== WORKFLOW SECTION ===================== -->
+<section class="workflow-section">
+
+    <div class="container text-center">
+
+        <h3 class="section-title mb-5">
+            How ParakhIQ Works
+        </h3>
+
+        <div class="workflow">
+
+            <div class="step">
+                <i class="bi bi-file-earmark-arrow-up step-icon"></i>
+                <p>Upload</p>
+            </div>
+
+            <div class="flow-line"></div>
+
+            <div class="step">
+                <i class="bi bi-cpu step-icon"></i>
+                <p>AI Analysis</p>
+            </div>
+
+            <div class="flow-line"></div>
+
+            <div class="step">
+                <i class="bi bi-search step-icon"></i>
+                <p>Skill Extraction</p>
+            </div>
+
+            <div class="flow-line"></div>
+
+            <div class="step">
+                <i class="bi bi-bullseye step-icon"></i>
+                <p>Role Prediction</p>
+            </div>
+
+            <div class="flow-line"></div>
+
+            <div class="step">
+                <i class="bi bi-lightbulb step-icon"></i>
+                <p>Recommendations</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ===================== WHY PARAKHIQ ===================== -->
+<section class="why-section">
+
+    <div class="container">
+
+        <h3 class="section-title text-center mb-5">
+            Why Choose ParakhIQ?
+        </h3>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="premium-card h-100">
+                    <h5>Accurate Role Prediction</h5>
+                    <p class="text-muted">
+                        AI understands your skills and predicts most suitable career paths.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="premium-card h-100">
+                    <h5>Skill Gap Detection</h5>
+                    <p class="text-muted">
+                        Identify missing skills and improve your resume effectively.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="premium-card h-100">
+                    <h5>Personalized Guidance</h5>
+                    <p class="text-muted">
+                        Get tailored career recommendations based on your profile.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer-section">
+
+    <div class="container text-center">
+
+        <h5 class="footer-brand">PARAKHIQ</h5>
+
+        <p class="text-muted">
+            AI Resume Intelligence Platform
+        </p>
+
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <span>|</span>
+            <a href="#">Feedback</a>
+        </div>
+
+        <small class="text-muted d-block mt-3">
+            Built for intelligent career growth
+        </small>
+
+    </div>
+
+</footer>
+
+{% endblock %}

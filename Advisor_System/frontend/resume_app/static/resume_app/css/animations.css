@@ -1,0 +1,63 @@
+/* =========================
+   BRAND GLOW
+========================= */
+
+.brand-glow {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(168,85,247,0.35), transparent 70%);
+    filter: blur(40px);
+    animation: floatGlow 6s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes floatGlow {
+    0% { transform: translateX(-50%) translateY(0px); }
+    50% { transform: translateX(-50%) translateY(20px); }
+    100% { transform: translateX(-50%) translateY(0px); }
+}
+
+/* =========================
+   WORKFLOW ANIMATION
+========================= */
+
+.flow-line {
+    position: relative;
+    overflow: hidden;
+}
+
+.flow-line::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #a855f7;
+    border-radius: 50%;
+    top: -4px;
+    left: 0;
+    animation: moveDot 2.5s linear infinite;
+}
+
+@keyframes moveDot {
+    0% { left: 0; opacity: 0; }
+    50% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+.premium-card:hover {
+    transform: translateY(-6px);
+    transition: 0.3s ease;
+}
+
+.analyze-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(168,85,247,0.3);
+}
