@@ -1,0 +1,319 @@
+
+/* =========================
+   BRAND
+========================= */
+
+.brand-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(168,85,247,0.12);
+    color: #c4b5fd;
+}
+
+/* =========================
+   HERO TEXT
+========================= */
+
+
+.hero-section {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+/* SMALL BADGE */
+.hero-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+
+    background: rgba(168,85,247,0.12);
+    color: #e9d5ff;
+
+    margin-bottom: 20px;
+}
+
+/* MAIN TITLE */
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+
+    color: #ffffff;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -1px;
+}
+
+/* SUBTITLE */
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #c4b5fd;
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+/* =========================
+   UPLOAD BOX
+========================= */
+
+.upload-box {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    padding: 40px;
+    background: rgba(255,255,255,0.03);
+}
+
+.upload-icon {
+    font-size: 3.5rem;
+    color: #c4b5fd;
+}
+
+/* upload row (IMPORTANT) */
+.upload-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.file-input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+}
+
+/* BUTTON */
+.analyze-btn {
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+/* =========================
+   WORKFLOW
+========================= */
+
+.workflow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.step {
+    text-align: center;
+    min-width: 120px;
+    color: #ddd6fe;
+}
+
+.step-icon {
+    font-size: 2rem;
+    color: #c4b5fd;
+}
+
+.flow-line {
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #a855f7, transparent);
+}
+
+/* =========================
+   WHY SECTION
+========================= */
+
+.premium-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(168,85,247,0.12);
+    border-radius: 18px;
+    padding: 25px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-section {
+    padding: 40px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-brand {
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.footer-links a {
+    color: #c4b5fd;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+
+/* =========================
+   PREDICTED ROLE CARD
+========================= */
+
+
+
+.card-label {
+
+    text-align: center;
+
+    font-style: italic;
+
+    font-size: 3.5rem;
+
+    font-weight: 700;
+
+    color: #f5f3ff;
+    
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+
+.role-title {
+
+    text-align: center;
+
+    font-size: 2.9rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    line-height: 1.1;
+
+    /* color: #ffffff; */
+    color : burlywood;
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+}
+
+
+.card-description {
+
+    text-align: center;
+
+    font-style: italic;
+
+    font-size: 1.05rem;
+
+    /* color: rgba(255,255,255,0.75); */
+    color: #f5f3ff;
+
+    line-height: 1.8;
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+
+.section-title{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    color:#ffffff;
+}
+
+
+.score-label{
+
+    text-align:center;
+
+    font-style:italic;
+
+    color:rgba(255,255,255,.75);
+
+    margin-bottom:20px;
+}
+
+.skill-badge {
+
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(239, 68, 68, 0.15);
+
+    border: 1px solid rgba(239, 68, 68, 0.25);
+
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+.dashboard-heading {
+
+    font-size: 4rem;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+
+.role-score-badge{
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:rgba(139,92,246,.15);
+
+    color:#f5f3ff;
+
+    border:1px solid rgba(192,132,252,.20);
+}
+
+
+.sub-section-title{
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+}
+
+
+.insight-title{
+
+    display:block;
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    color:#c4b5fd;
+
+    margin-bottom:10px;
+}
