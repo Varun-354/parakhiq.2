@@ -44,7 +44,7 @@ def ask_llm(prompt):
 # =========================
 # 🔹 PROMPT GENERATOR
 # =========================
-def get_analyse_prompt(
+def  get_analyse_prompt(
     resume_text,
     predicted_role,
     top_roles,

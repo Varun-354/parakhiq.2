@@ -1,5 +1,5 @@
 from phase_3 import full_resume_analysis
-# from phase_5 import ask_llm,get_analysis_prompt
+# from phase_5 import ask_llm,get_analyse_prompt
 
 # Step 1: Run Phase 3
 result = full_resume_analysis("sample_resume.txt")
@@ -11,7 +11,7 @@ skills = result["skills"]
 resume_text = open("sample_resume.txt").read()
 
 # # Step 3: Generate Prompt
-# prompt = get_analysis_prompt(resume_text, predicted_role)
+# prompt = get_analyse_prompt(resume_text, predicted_role)
 
 # # Step 4: Call LLM
 # llm_feedback = ask_llm(prompt)
